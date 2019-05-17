@@ -16,3 +16,5 @@ Paper Toss AR is a simple augmented reality demo app for iOS, created using ARKi
 ![](screenrecording.gif)
 
 Feel free to use it as an example on how to use ARKit.
+
+Also check out Labyrinth AR, a labyrinth builder that lets you build and explore labyrinths in AR: https://hundredeni.com/products/games/labyrinth-ar/
