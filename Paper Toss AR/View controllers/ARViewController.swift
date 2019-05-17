@@ -155,7 +155,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDe
         let text = SCNText(string: "Score: \(score)", extrusionDepth: 0.01)
         text.materials = [textMaterial]
         text.font = UIFont.systemFont(ofSize: 0.1)
-        text.alignmentMode = kCAAlignmentCenter
+        text.alignmentMode = convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.center)
         
         // Create and center text node
         let textNode = SCNNode(geometry: text)
@@ -429,7 +429,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDe
         }
         
         // Handle .failed, .cancelled
-        let allowedStates: [UIGestureRecognizerState] = [.began, .changed]
+        let allowedStates: [UIGestureRecognizer.State] = [.began, .changed]
         guard allowedStates.contains(sender.state) else {
             paperNode?.removeFromParentNode()
             paperNode = nil
@@ -554,4 +554,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDe
         
         return (SCNVector3(0, 0, -1), SCNVector3(0, 0, -0.2))
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCATextLayerAlignmentMode(_ input: CATextLayerAlignmentMode) -> String {
+	return input.rawValue
 }
