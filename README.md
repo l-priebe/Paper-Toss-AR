@@ -5,7 +5,7 @@ Paper Toss AR is a simple augmented reality demo app for iOS, created using ARKi
 - Example flow for preparing the AR experience
   - Guiding the user
   - Detecting and drawing ground planes
-  - Placing objects on the planes
+  - Placing objects
 - Example flow for readjusting the AR experience
   - Resetting the session
   - Repositioning objects
